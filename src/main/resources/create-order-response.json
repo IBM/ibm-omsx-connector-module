@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "DocumentType": {
+      "type": "string"
+    },
+    "OrderNo": {
+      "type": "string"
+    },
+    "OrderHeaderKey": {
+      "type": "string"
+    },
+    "EnterpriseCode": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "DocumentType",
+    "OrderNo",
+    "OrderHeaderKey",
+    "EnterpriseCode"
+  ]
+}
