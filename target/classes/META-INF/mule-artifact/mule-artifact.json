@@ -2,11 +2,11 @@
   "extensionModelLoaderDescriptor": {
     "id": "java",
     "attributes": {
-      "type": "org.mule.extension.internal.BasicExtension",
-      "version": "1.0.46"
+      "type": "org.ibm.sterling.mule.oms.extension.BasicExtension",
+      "version": "1.0.0"
     }
   },
-  "name": "IBM-OMS",
+  "name": "IBM-OMSX",
   "requiredProduct": "MULE",
   "classLoaderModelLoaderDescriptor": {
     "id": "mule",
