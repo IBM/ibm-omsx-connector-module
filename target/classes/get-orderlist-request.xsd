@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Order">
-    <xs:complexType>
-      <xs:attribute name="CustomerEmailID" type="xs:string" use="required" />
-    </xs:complexType>
-  </xs:element>
+  <xs:element name="Order" type="OrderType"/>
+  <xs:complexType name="OrderType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="CustomerEmailID"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
 </xs:schema>

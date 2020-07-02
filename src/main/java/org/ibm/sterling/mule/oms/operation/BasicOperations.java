@@ -36,7 +36,7 @@ public class BasicOperations {
  * @throws KeyManagementException 
    */
   
- Logger logger = LoggerFactory.getLogger(BasicOperations.class);
+// Logger logger = LoggerFactory.getLogger(BasicOperations.class);
 	  
   @MediaType(MediaType.APPLICATION_JSON)
   @OutputJsonType(schema = "get-orderdetails-response.json")
@@ -48,7 +48,7 @@ public class BasicOperations {
       String url = configuration.getUrl();
       String username = configuration.getUsername();
       String password = configuration.getPassword();
-      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes());
+      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes(StandardCharsets.UTF_8));
       String auth = "Basic "+encoding;
       String contenttype = "application/xml";
 	  return buildHelloMessage(url,writer.toString(), auth, contenttype);
@@ -63,7 +63,7 @@ public class BasicOperations {
       String url = configuration.getUrl();
       String username = configuration.getUsername();
       String password = configuration.getPassword();
-      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes());
+      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes(StandardCharsets.UTF_8));
       String auth = "Basic "+encoding;
       String contenttype = "application/xml";
 	 return buildHelloMessage(url,writer.toString(), auth, contenttype);
@@ -78,7 +78,7 @@ public class BasicOperations {
       String url = configuration.getUrl();
       String username = configuration.getUsername();
       String password = configuration.getPassword();
-      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes());
+      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes(StandardCharsets.UTF_8));
       String auth = "Basic "+encoding;
       String contenttype = "application/xml";
       
@@ -95,7 +95,7 @@ public class BasicOperations {
       String url = configuration.getUrl();
       String username = configuration.getUsername();
       String password = configuration.getPassword();
-      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes());
+      String encoding = Base64.getEncoder().encodeToString((username + ":" +password).getBytes(StandardCharsets.UTF_8));
       String auth = "Basic "+encoding;
       String contenttype = "application/xml";
       
