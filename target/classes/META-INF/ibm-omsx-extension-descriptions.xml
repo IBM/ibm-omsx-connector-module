@@ -25,6 +25,21 @@
                 <parameter name="omsTokenUrl">
                     <description><![CDATA[]]></description>
                 </parameter>
+                <parameter name="timeoutInMillis">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="proxyHost">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="proxyPort">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="proxyUserName">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="proxyPassword">
+                    <description><![CDATA[]]></description>
+                </parameter>
                 <parameter name="expirationPolicy">
                     <description><![CDATA[Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit.]]></description>
                 </parameter>
@@ -93,7 +108,7 @@
             </parameters>
         </operation>
         <operation name="getOrderDetail">
-            <description><![CDATA[Example of a simple operation that receives a string parameter and returns a new string message that will be set on the payload.]]></description>
+            <description><![CDATA[]]></description>
             <parameters>
                 <parameter name="requestBody">
                     <description><![CDATA[]]></description>

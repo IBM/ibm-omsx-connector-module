@@ -3,7 +3,7 @@
     "id": "java",
     "attributes": {
       "type": "org.ibm.sterling.mule.oms.extension.BasicExtension",
-      "version": "1.0.3"
+      "version": "1.0.5"
     }
   },
   "name": "IBM-OMSX",

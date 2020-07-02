@@ -37,6 +37,11 @@ Default configuration
 | Username a| String |  |  | {nbsp}
 | Password a| String |  |  | {nbsp}
 | Oms Token Url a| String |  |  | {nbsp}
+| Timeout In Millis a| Number |  |  | {nbsp}
+| Proxy Host a| String |  |  | {nbsp}
+| Proxy Port a| String |  |  | {nbsp}
+| Proxy User Name a| String |  |  | {nbsp}
+| Proxy Password a| String |  |  | {nbsp}
 | Expiration Policy a| <<ExpirationPolicy>> |  +++Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit.+++ |  | {nbsp}
 |======================
 
@@ -67,7 +72,7 @@ Default configuration
 == Operations
 
 [[captureOrder]]
-=== Capture Order
+=== Create Order
 `<ibm-omsx:capture-order>`
 
 
@@ -125,12 +130,9 @@ Default configuration
 
 
 [[getOrderDetail]]
-=== Get Order Detail
+=== get Order Details
 `<ibm-omsx:get-order-detail>`
 
-+++
-Example of a simple operation that receives a string parameter and returns a new string message that will be set on the payload.
-+++
 
 ==== Parameters
 [cols=".^20%,.^20%,.^35%,.^20%,^.^5%", options="header"]
@@ -157,7 +159,7 @@ Example of a simple operation that receives a string parameter and returns a new
 
 
 [[getOrderList]]
-=== Get Order List
+=== get Order List
 `<ibm-omsx:get-order-list>`
 
 

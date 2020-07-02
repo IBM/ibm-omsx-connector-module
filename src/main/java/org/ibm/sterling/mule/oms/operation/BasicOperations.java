@@ -4,7 +4,6 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
-import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 //import java.util.Base64;
 import java.security.KeyManagementException;
@@ -18,6 +17,9 @@ import org.mule.runtime.extension.api.annotation.metadata.fixed.InputXmlType;
 import org.mule.runtime.extension.api.annotation.metadata.fixed.OutputJsonType;
 import org.mule.runtime.extension.api.annotation.param.Config;
 import org.mule.runtime.extension.api.annotation.param.MediaType;
+import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -34,9 +36,13 @@ public class BasicOperations {
  * @throws KeyManagementException 
    */
   
+ Logger logger = LoggerFactory.getLogger(BasicOperations.class);
+	  
   @MediaType(MediaType.APPLICATION_JSON)
   @OutputJsonType(schema = "get-orderdetails-response.json")
+  @DisplayName("get Order Details")
   public InputStream getOrderDetail(@Config BasicConfiguration configuration, @InputXmlType(schema = "get-orderdetails-request.xsd", qname = "Order") InputStream requestBody) throws Exception {
+	  logger.info("Get Order Details Operation called");
 	  StringWriter writer = new StringWriter();
       IOUtils.copy(requestBody, writer, StandardCharsets.UTF_8);
       String url = configuration.getUrl();
@@ -50,6 +56,7 @@ public class BasicOperations {
   
   @MediaType(MediaType.APPLICATION_JSON)
   @OutputJsonType(schema = "get-orderlist-response.json")
+  @DisplayName("get Order List")
   public InputStream getOrderList(@Config BasicConfiguration configuration, @InputXmlType(schema = "get-orderlist-request.xsd", qname = "Order") InputStream requestBody) throws Exception {
 	  StringWriter writer = new StringWriter();
       IOUtils.copy(requestBody, writer, StandardCharsets.UTF_8);
@@ -64,6 +71,7 @@ public class BasicOperations {
   
   @MediaType(MediaType.APPLICATION_JSON)
   @OutputJsonType(schema = "create-order-response.json")
+  @DisplayName("Create Order")
   public InputStream captureOrder(@Config BasicConfiguration configuration,@InputXmlType(schema = "create-order-request.xsd", qname = "Order") InputStream requestBody) throws Exception {
 	  StringWriter writer = new StringWriter();
       IOUtils.copy(requestBody, writer, StandardCharsets.UTF_8);
@@ -80,6 +88,7 @@ public class BasicOperations {
     
   @MediaType(MediaType.APPLICATION_JSON)
   @OutputJsonType(schema = "change-order-response.json")
+  @DisplayName("Change Order")
   public InputStream changeOrder(@Config BasicConfiguration configuration,@InputXmlType(schema = "change-order-request.xsd", qname = "Order") InputStream requestBody) throws Exception {
 	  StringWriter writer = new StringWriter();
       IOUtils.copy(requestBody, writer, StandardCharsets.UTF_8);

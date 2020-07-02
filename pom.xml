@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.mule.extension</groupId>
     <artifactId>mule-omsx-extension</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <packaging>mule-extension</packaging>
     <name>OMSX Connector</name>
 
@@ -28,6 +28,12 @@
 		    <groupId>org.json</groupId>
 		    <artifactId>json</artifactId>
 		    <version>20190722</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.7.30</version>
 		</dependency>
 		
 		<dependency>

@@ -2076,10 +2076,10 @@ table.CodeRay td.code>pre{padding:0}
 </li>
 <li><a href="#_operations">Operations</a>
 <ul class="sectlevel2">
-<li><a href="#captureOrder">Capture Order</a></li>
+<li><a href="#captureOrder">Create Order</a></li>
 <li><a href="#changeOrder">Change Order</a></li>
-<li><a href="#getOrderDetail">Get Order Detail</a></li>
-<li><a href="#getOrderList">Get Order List</a></li>
+<li><a href="#getOrderDetail">get Order Details</a></li>
+<li><a href="#getOrderList">get Order List</a></li>
 </ul>
 </li>
 <li><a href="#_types">Types</a>
@@ -2218,6 +2218,51 @@ Default configuration
 <td class="tableblock halign-center valign-middle"><p class="tableblock">&#160;</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Timeout In Millis</p></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>Number</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#160;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Proxy Host</p></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>String</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#160;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Proxy Port</p></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>String</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#160;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Proxy User Name</p></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>String</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#160;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">Proxy Password</p></td>
+<td class="tableblock halign-left valign-middle"><div><div class="paragraph">
+<p>String</p>
+</div></div></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-left valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">&#160;</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-middle"><p class="tableblock">Expiration Policy</p></td>
 <td class="tableblock halign-left valign-middle"><div><div class="paragraph">
 <p><a href="#ExpirationPolicy">Expiration Policy</a></p>
@@ -2308,16 +2353,16 @@ Default configuration
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#captureOrder">Capture Order</a> &#160;</p>
+<p><a href="#captureOrder">Create Order</a> &#160;</p>
 </li>
 <li>
 <p><a href="#changeOrder">Change Order</a> &#160;</p>
 </li>
 <li>
-<p><a href="#getOrderDetail">Get Order Detail</a> &#160;</p>
+<p><a href="#getOrderDetail">get Order Details</a> &#160;</p>
 </li>
 <li>
-<p><a href="#getOrderList">Get Order List</a> &#160;</p>
+<p><a href="#getOrderList">get Order List</a> &#160;</p>
 </li>
 </ul>
 </div>
@@ -2329,7 +2374,7 @@ Default configuration
 <h2 id="_operations">Operations</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="captureOrder">Capture Order</h3>
+<h3 id="captureOrder">Create Order</h3>
 <div class="paragraph">
 <p><code>&lt;ibm-omsx:capture-order&gt;</code></p>
 </div>
@@ -2547,14 +2592,9 @@ Default configuration
 </div>
 </div>
 <div class="sect2">
-<h3 id="getOrderDetail">Get Order Detail</h3>
+<h3 id="getOrderDetail">get Order Details</h3>
 <div class="paragraph">
 <p><code>&lt;ibm-omsx:get-order-detail&gt;</code></p>
-</div>
-<div class="paragraph">
-<p>
-Example of a simple operation that receives a string parameter and returns a new string message that will be set on the payload.
-</p>
 </div>
 <div class="sect3">
 <h4 id="_parameters_5">Parameters</h4>
@@ -2661,7 +2701,7 @@ Example of a simple operation that receives a string parameter and returns a new
 </div>
 </div>
 <div class="sect2">
-<h3 id="getOrderList">Get Order List</h3>
+<h3 id="getOrderList">get Order List</h3>
 <div class="paragraph">
 <p><code>&lt;ibm-omsx:get-order-list&gt;</code></p>
 </div>

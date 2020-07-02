@@ -49,6 +49,25 @@ public class BasicConfiguration {
   @Optional
   protected String omsTokenUrl;
 
+  @Parameter
+  @Optional
+  protected Integer timeoutInMillis;
+
+  @Parameter
+  @Optional
+  protected String proxyHost;
+  
+  @Parameter
+  @Optional
+  protected String proxyPort;
+  
+  @Parameter
+  @Optional
+  protected String proxyUserName;
+  
+  @Parameter
+  @Optional
+  protected String proxyPassword;
   
   public MultiMap<String, String> getHeaders() {
     return headers;
@@ -85,5 +104,30 @@ public class BasicConfiguration {
 	}
 
 
+	public Integer getTimeoutInMillis() {
+		return timeoutInMillis;
+	}
+
+
+	public String getProxyHost() {
+		return proxyHost;
+	}
+
+
+	public String getProxyPort() {
+		return proxyPort;
+	}
+
+
+	public String getProxyUserName() {
+		return proxyUserName;
+	}
+
+
+	public String getProxyPassword() {
+		return proxyPassword;
+	}
+
+	
 	
 }
